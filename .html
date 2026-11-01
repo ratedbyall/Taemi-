@@ -1,0 +1,398 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday, Taemi ✨</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --forest: #071b16;
+    --emerald: #183d2e;
+    --gold: #d8c18b;
+    --cream: #f5efd9;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--cream);
+    background:
+        radial-gradient(ellipse at 50% 25%,
+            rgba(92, 129, 91, 0.45), transparent 40%),
+        radial-gradient(ellipse at 15% 85%,
+            rgba(25, 91, 65, 0.65), transparent 45%),
+        linear-gradient(180deg,
+            #091a20 0%,
+            #102c25 48%,
+            #07140f 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 18px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Moonlight */
+
+.moon {
+    position: fixed;
+    top: 7%;
+    right: 12%;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #f4e9bc;
+    box-shadow:
+        0 0 25px rgba(244, 233, 188, .5),
+        0 0 85px rgba(244, 233, 188, .2);
+    opacity: .85;
+    z-index: 0;
+}
+
+.moon::after {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 78px;
+    background: #102c25;
+    border-radius: 50%;
+    top: -12px;
+    left: 24px;
+}
+
+/* Artistic forest silhouette */
+
+.forest {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.tree {
+    position: absolute;
+    bottom: -35px;
+    width: 100px;
+    height: 75%;
+    opacity: .45;
+    background: linear-gradient(
+        90deg, #06120f, #183b2a, #06120f
+    );
+    clip-path: polygon(
+        40% 100%, 40% 45%, 10% 28%,
+        30% 30%, 8% 13%, 38% 23%,
+        50% 0%, 62% 23%, 92% 13%,
+        70% 30%, 92% 28%, 60% 45%,
+        60% 100%
+    );
+}
+
+.tree:nth-child(1) {
+    left: -10px;
+    height: 85%;
+    transform: scale(1.2);
+}
+
+.tree:nth-child(2) {
+    left: 10%;
+    height: 65%;
+    transform: scale(.8);
+}
+
+.tree:nth-child(3) {
+    right: 2%;
+    height: 88%;
+    transform: scale(1.2);
+}
+
+.tree:nth-child(4) {
+    right: 13%;
+    height: 65%;
+    transform: scale(.8);
+}
+
+/* Floating magical particles */
+
+.sparkle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #f8e9a8;
+    box-shadow: 0 0 10px #f8e9a8;
+    pointer-events: none;
+    animation: twinkle 3s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: .15;
+        transform: scale(.6);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+/* Main birthday artwork */
+
+.card {
+    position: relative;
+    z-index: 2;
+    width: min(100%, 760px);
+    padding: 48px 35px;
+    text-align: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12, 36, 27, .76),
+            rgba(9, 25, 22, .62)
+        );
+
+    border: 1px solid rgba(216, 193, 139, .55);
+    outline: 1px solid rgba(216, 193, 139, .2);
+    outline-offset: 8px;
+
+    box-shadow:
+        0 0 60px rgba(0, 0, 0, .3),
+        inset 0 0 40px rgba(216, 193, 139, .04);
+
+    animation: appear 2s ease both;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ornament {
+    color: var(--gold);
+    font-size: 1.3rem;
+    letter-spacing: 12px;
+}
+
+.eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: .72rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #c6d6ac;
+    margin-top: 25px;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(3.2rem, 9vw, 5.6rem);
+    font-weight: 400;
+    line-height: 1.15;
+    color: #ead8a6;
+    margin: 16px 0;
+    text-shadow:
+        0 0 15px rgba(230, 207, 143, .25),
+        0 0 35px rgba(230, 207, 143, .12);
+}
+
+.subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: .8rem;
+    letter-spacing: 3px;
+    color: #a8c6a6;
+}
+
+.divider {
+    color: var(--gold);
+    margin: 25px 0;
+    letter-spacing: 8px;
+}
+
+.message {
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+    line-height: 1.85;
+    color: #f1eddc;
+}
+
+.message em {
+    color: #e4d3a1;
+}
+
+.closing {
+    margin-top: 30px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: #e7d6a7;
+}
+
+.signature {
+    font-family: 'Cinzel', serif;
+    color: #a9c5a4;
+    font-size: .7rem;
+    letter-spacing: 3px;
+    margin-top: 14px;
+}
+
+footer {
+    margin-top: 32px;
+    font-size: .95rem;
+    font-style: italic;
+    color: #bdcdb5;
+}
+
+/* Mobile adjustments */
+
+@media (max-width: 480px) {
+    body {
+        padding: 30px 20px;
+    }
+
+    .card {
+        padding: 35px 22px;
+    }
+
+    .moon {
+        width: 55px;
+        height: 55px;
+        right: 8%;
+    }
+
+    .moon::after {
+        width: 52px;
+        height: 52px;
+        left: 17px;
+        top: -8px;
+    }
+
+    .eyebrow {
+        letter-spacing: 3px;
+    }
+
+    .subtitle {
+        letter-spacing: 2px;
+    }
+
+    .ornament {
+        letter-spacing: 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="moon"></div>
+
+<!-- Illustrated forest -->
+<div class="forest" aria-hidden="true">
+    <div class="tree"></div>
+    <div class="tree"></div>
+    <div class="tree"></div>
+    <div class="tree"></div>
+</div>
+
+<main class="card">
+
+    <div class="ornament">✧ ❋ ✧</div>
+
+    <div class="eyebrow">
+        A blessing from the enchanted woods
+    </div>
+
+    <h1>Happy Birthday,<br>Taemi</h1>
+
+    <div class="subtitle">
+        CHILD OF STARS &amp; FOREST
+    </div>
+
+    <div class="divider">
+        ─── ❦ ───
+    </div>
+
+    <p class="message">
+        May your wonderful artistic mind always be blessed,<br>
+        and may inspiration find you in the quietest corners
+        of the world.<br><br>
+
+        Cheers to more years of horse riding, stargazing,
+        and spicy food. 🌙🍃<br><br>
+
+        On this enchanted day, I celebrate you for being you
+        and hope to see you grow more beautiful of heart
+        and mind —<br><br>
+
+        a gentle spirit, a glowing heart, and all the magic
+        you bring into this world.<br><br>
+
+        May the forest whisper good fortune in your direction,
+        may the stars illuminate your dreams, and may every
+        new chapter bring you closer to the life you imagine.
+        ✨
+    </p>
+
+    <div class="divider">
+        ─── ❦ ───
+    </div>
+
+    <div class="closing">
+        May your magic never fade.
+    </div>
+
+    <div class="signature">
+        WITH LOVE &amp; ELVEN BLESSINGS
+    </div>
+
+    <footer>
+        Beneath the same stars, may wonder always find you. 🌿
+    </footer>
+
+</main>
+
+<script>
+/* A little stardust scattered across the forest */
+for (let i = 0; i < 65; i++) {
+    const star = document.createElement("div");
+    star.className = "sparkle";
+
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.animationDelay = Math.random() * 4 + "s";
+    star.style.animationDuration =
+        (2 + Math.random() * 4) + "s";
+
+    const size = 2 + Math.random() * 3;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    document.body.appendChild(star);
+}
+</script>
+
+</body>
+</html>
